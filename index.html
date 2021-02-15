@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="img/icon.svg" type="image/svg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" media="screen" />
+    <link rel="stylesheet" href="css/mobile_style.css" media="handheld"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Benne&display=swap" rel="stylesheet"> 
+    <title>Document</title>
+</head>
+<body>
+    <div class="logo">
+     <div class="img">
+         <a href="https://www.instagram.com/n_yaremiy/" target="_blank" rel="noopener noreferrer">   <img src="img/icon2.png" alt="null"> </a>
+     </div>
+     <h1>YourScreenShot</h1>
+    </div>
+  
+<form action="">
+    <input type="button" value="Next" id="btn" class="bntNext" onclick="clearImg()">
+</form>
+  
+    <script>
+        showImg();
+        
+        function showImg(){ 
+        var name;
+        var name2;
+        var number;
+        number = Math.round( Math.random() * (2 - 1) + 1);
+        name = number + '.png';
+        name2 = '<img class="imgimg" src="' + name + '">';
+        document.body.innerHTML += name2;
+}
+
+        function clearImg(){
+            var elems = document.getElementsByClassName('imgimg');
+            for(var i=0; i<elems.length; i++) {
+            elems[i].remove();
+        }
+        showImg();
+       
+    }
+
+    </script>
+</body>
+</html>
